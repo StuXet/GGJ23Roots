@@ -8,20 +8,18 @@ public class Enemy : MonoBehaviour
     public float speed = 2f;
 
     private Transform player;
-    private Rigidbody2D rb;
     private RootHealth playerHealth;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
         playerHealth = player.GetComponent<RootHealth>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
