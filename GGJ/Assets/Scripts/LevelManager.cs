@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     GameObject[] treeLevels;
 
+
     private static LevelManager instance;
     public static LevelManager Instance { get { return instance; } }
     private void Awake()
