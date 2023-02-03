@@ -28,8 +28,11 @@ public class Mole : MonoBehaviour
         if (timer <= 0)
         {
             Enemy tar = SpawnManager.Instance.worms[Random.Range(0, SpawnManager.Instance.worms.Count)];
-            tar.health -= tar.health;
-            timer = killInterval;
+            if (tar.level <= wormMaxLVL)
+            {
+                tar.health -= tar.health;
+                timer = killInterval;
+            }
         }
     }
 

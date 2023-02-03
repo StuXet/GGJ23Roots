@@ -20,6 +20,8 @@ public class Spawner : MonoBehaviour
             prefabIndex = prefabs.Length - 1;
         }
         GameObject worm = Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
-        SpawnManager.Instance.worms.Add(worm.GetComponent<Enemy>());
+        Enemy wormEnemy = worm.GetComponent<Enemy>();
+        wormEnemy.speed -= gameManager.wormSpeedDecreaser;
+        SpawnManager.Instance.worms.Add(wormEnemy);
     }
 }
