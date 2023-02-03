@@ -4,29 +4,17 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] prefabs;
-    public float initialDelay = 1f;
-    public float spawnInterval = 2f;
-    public float intervalDecrease = 0.1f;
+    [SerializeField] GameObject[] prefabs;
+    GameManager gameManager;
 
-    private float currentInterval;
-    private float timer;
 
-    void Start()
+    private void Start()
     {
-        currentInterval = spawnInterval;
-        timer = initialDelay;
+       gameManager = GameManager.instance;
     }
-
-    void Update()
+    public void Spawn()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            int prefabIndex = Random.Range(0, prefabs.Length);
-            Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
-            timer = currentInterval;
-            currentInterval -= intervalDecrease;
-        }
+        int prefabIndex = Random.Range(0, gameManager.currentLvl);
+        Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
     }
 }

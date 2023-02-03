@@ -7,6 +7,7 @@ public class Mole : MonoBehaviour
 
     Transform currentTarget;
     [SerializeField] float attackRange;
+    [SerializeField] float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,28 @@ public class Mole : MonoBehaviour
 
     void MoveToTarget()
     {
-        transform.Translate(currentTarget.position);
+        //transform.Translate();
     }
 
     void FindNewTarget()
     {
+        var colls = Physics2D.OverlapCircleAll(currentTarget.position, attackRange);
+
+        Transform tempTarget = colls[0].transform;
+        float shortestDist = Vector2.Distance(transform.position, tempTarget.position);
+
+        foreach (var coll in colls)
+        {
+            float currentCheckDis = Vector2.Distance(transform.position, coll.transform.position);
+
+            if (currentCheckDis < shortestDist)
+            {
+                shortestDist = currentCheckDis;
+                tempTarget = coll.transform;
+            }
+        }
+
+        currentTarget = tempTarget;
 
     }
 
@@ -35,7 +53,5 @@ public class Mole : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(transform.position, attackRange);
     }
-
-
 
 }

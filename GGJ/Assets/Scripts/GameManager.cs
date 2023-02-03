@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int points = 10;
     public Text scoreText;
+    public int currentLvl = 1;
 
     private int score;
 
