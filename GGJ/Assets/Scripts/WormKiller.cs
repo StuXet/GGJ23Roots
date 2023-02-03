@@ -5,8 +5,8 @@ using UnityEngine;
 public class WormKiller : MonoBehaviour
 {
     public List<Enemy> worms;
-    [SerializeField] float hitInterval = 5;
-    [SerializeField] int strength = 1;
+    public float hitInterval = 2;
+    public int strength = 1;
     public bool isActive;
     float timer;
 

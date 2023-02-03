@@ -5,8 +5,25 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]List<Spawner> spawners = new List<Spawner>();
-    [SerializeField] float spawnInterval = 1;
+    public float spawnInterval = 1;
     float timer;
+
+    private static SpawnManager instance;
+    public static SpawnManager Instance { get { return instance; } }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
 
 
     // Start is called before the first frame update
