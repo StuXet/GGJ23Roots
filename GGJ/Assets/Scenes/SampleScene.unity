@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 737847}
   - component: {fileID: 737846}
   - component: {fileID: 737848}
+  - component: {fileID: 737850}
+  - component: {fileID: 737849}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -153,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77df56d41313d1e4f8cb777df62d46d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 10
   scoreText: {fileID: 1220847489}
+  playerDamage: 1
   currentLvl: 1
 --- !u!4 &737847
 Transform:
@@ -183,8 +185,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawners:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 185476345}
+  - {fileID: 663858865}
+  - {fileID: 436755992}
+  - {fileID: 911966869}
+  - {fileID: 1117105736}
+  - {fileID: 1661672455}
+  - {fileID: 326300259}
+  - {fileID: 1668622105}
+  - {fileID: 1261266860}
+  - {fileID: 1235001165}
+  - {fileID: 355323137}
+  - {fileID: 1067693598}
+  - {fileID: 110328763}
+  - {fileID: 600371574}
+  - {fileID: 186050833}
+  - {fileID: 1807604200}
+  - {fileID: 1567170386}
+  - {fileID: 1171422580}
+  - {fileID: 1011462989}
+  - {fileID: 1547385622}
+  - {fileID: 1685994819}
+  - {fileID: 358812185}
+  - {fileID: 1894985075}
+  - {fileID: 848562805}
+  - {fileID: 849395689}
+  - {fileID: 1751314893}
+  - {fileID: 960175058}
+  - {fileID: 1933417528}
+  - {fileID: 795794662}
+  - {fileID: 1749467441}
+  - {fileID: 993809654}
+  - {fileID: 1075214859}
+  - {fileID: 691899161}
+  - {fileID: 1121731169}
+  - {fileID: 97031124}
+  - {fileID: 847854595}
+  - {fileID: 622921370}
   - {fileID: 185476345}
   - {fileID: 663858865}
   - {fileID: 436755992}
@@ -223,6 +260,46 @@ MonoBehaviour:
   - {fileID: 847854595}
   - {fileID: 622921370}
   spawnInterval: 1
+--- !u!114 &737849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d072da326ae846aedebf38cacc3e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  molePrice: 0
+  moleDamageUpgrade: 0
+  moleSpeedUpgrade: 0
+  birdPrice: 0
+  birdDamageUpgrade: 0
+  birdSpeedUpgrade: 0
+  kPrice: 0
+  kDamageUpgrade: 0
+  kSpeedUpgrade: 0
+  sprinklerPrice: 0
+  sprinklerDamageUpgrade: 0
+  sprinklerSpeedUpgrade: 0
+--- !u!114 &737850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8b442d3cd2d844cb1aa856bc8a0b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worms: []
+  hitInterval: 5
+  strength: 1
+  isActive: 0
 --- !u!1 &12094532
 GameObject:
   m_ObjectHideFlags: 0
