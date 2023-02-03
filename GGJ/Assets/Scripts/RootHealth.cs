@@ -8,13 +8,11 @@ public class RootHealth : MonoBehaviour
     GameManager gameManager;
     public int maxHealth = 100;
     public int currentHealth;
-    public Text healthText;
 
     void Start()
     {
         gameManager = GameManager.instance;
         currentHealth = maxHealth;
-        UpdateHealthText();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +21,6 @@ public class RootHealth : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             currentHealth -= 10;
-            UpdateHealthText();
             WormKiller.Instance.worms.Remove(collision.gameObject.GetComponent<Enemy>());
             Destroy(collision.gameObject);
             if (currentHealth <= 0)
@@ -32,11 +29,6 @@ public class RootHealth : MonoBehaviour
                 Death();
             }
         }
-    }
-
-    void UpdateHealthText()
-    {
-        healthText.text = "Health: " + currentHealth;
     }
 
     void Death()
