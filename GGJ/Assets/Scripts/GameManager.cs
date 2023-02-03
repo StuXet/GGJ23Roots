@@ -5,11 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Text scoreText;
-    public int playerDamage = 1;
-    public int currentLvl = 1;
+    public int playerDamage = 5;
     bool isrunning = true; 
 
-    private int score;
+    public int score;
 
     void Awake()
     {
