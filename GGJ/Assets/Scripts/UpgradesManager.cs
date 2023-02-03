@@ -6,28 +6,34 @@ public class UpgradesManager : MonoBehaviour
 {
 
     [Header("Mole")]
-    [SerializeField] GameObject moleModel;
+    [SerializeField] Mole mole;
+    [SerializeField] int moleLVL;
     public float molePrice;
     public float molePriceMod;
-    public int moleDamageUpgrade;
+    public int moleWormLvlUpgrade;
     public int moleSpeedUpgrade;
     bool moleFirstPurchase;
     public void MoleUpgrade()
     {
-        Bird.Instance.strength += moleDamageUpgrade;
-        Bird.Instance.hitInterval -= moleSpeedUpgrade;
+        if (moleLVL % 2 == 0)
+        {
+            mole.wormMaxLVL += moleWormLvlUpgrade;
+        }
+        mole.killInterval -= moleSpeedUpgrade;
         GameManager.instance.score -= (int)molePrice;
         molePrice *= molePriceMod;
         if (moleFirstPurchase)
         {
-            //show model
+            mole.gameObject.SetActive(true);
         }
+        moleLVL++;
     }
 
     [Space(10)]
 
     [Header("Bird")]
-    [SerializeField] GameObject birdModel;
+    [SerializeField] Bird bird;
+    [SerializeField] int birdLVL;
     public float birdPrice;
     public float birdPriceMod;
     public int birdDamageUpgrade;
@@ -35,20 +41,22 @@ public class UpgradesManager : MonoBehaviour
     bool birdFirstPurchase;
     public void BirdUpgrade()
     {
-        Bird.Instance.strength += birdDamageUpgrade;
-        Bird.Instance.hitInterval -= birdSpeedUpgrade;
+        bird.strength += birdDamageUpgrade;
+        bird.hitInterval -= birdSpeedUpgrade;
         GameManager.instance.score -= (int)birdPrice;
         birdPrice *= birdPriceMod;
         if (birdFirstPurchase)
         {
-            //show model
+            bird.gameObject.SetActive(true);
         }
+        birdLVL++;
     }
 
     [Space(10)]
 
     [Header("K300")]
-    [SerializeField] GameObject kModel;
+    [SerializeField] Spray k300;
+    [SerializeField] int k300LVL;
     public float kPrice;
     public float kPriceMod;
     public int kDamageUpgrade;
@@ -56,21 +64,21 @@ public class UpgradesManager : MonoBehaviour
     bool kFirstPurchase;
     public void K300Upgrade()
     {
-        Bird.Instance.strength += kDamageUpgrade;
-        Bird.Instance.hitInterval -= kSpeedUpgrade;
+       
         GameManager.instance.score -= (int)kPrice;
         kPrice *= kPriceMod;
         if (kFirstPurchase)
         {
-            //show model
-
+            k300.gameObject.SetActive(true);
         }
+        k300LVL++;
     }
 
     [Space(10)]
 
     [Header("Sprinkler")]
-    [SerializeField] GameObject sprinklerModel;
+    [SerializeField] GameObject sprinkler;
+    [SerializeField] int sprinklerLVL;
     public float sprinklerPrice;
     public float sprinklerPriceMod;
     public int sprinklerDamageUpgrade;
@@ -78,8 +86,7 @@ public class UpgradesManager : MonoBehaviour
     bool sprinklerFirstPurchase;
     public void SprinklerUpgrade()
     {
-        Bird.Instance.strength += sprinklerDamageUpgrade;
-        Bird.Instance.hitInterval -= sprinklerSpeedUpgrade;
+       
         GameManager.instance.score -= (int)sprinklerPrice;
         sprinklerPrice *= sprinklerPriceMod;
         if (sprinklerFirstPurchase)
@@ -87,5 +94,6 @@ public class UpgradesManager : MonoBehaviour
             //show model
 
         }
+        sprinklerLVL++;
     }
 }

@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Text scoreText;
     public int playerDamage = 5;
-    bool isrunning = true; 
+    bool isrunning = true;
+
 
     public int score;
 

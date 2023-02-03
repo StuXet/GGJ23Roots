@@ -4,29 +4,10 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    public List<Enemy> worms;
     public float hitInterval = 2;
     public int strength = 1;
-    public bool isActive;
     float timer;
-
-    private static Bird instance;
-    public static Bird Instance { get { return instance; } }
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(gameObject);
-    }
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -41,20 +22,18 @@ public class Bird : MonoBehaviour
 
     void hitCycle()
     {
-        if (isActive)
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                hit();
-                timer = hitInterval;
-            }
+            hit();
+            timer = hitInterval;
         }
     }
 
     void hit()
     {
-        Enemy tar = worms[Random.Range(0, worms.Count)];
+        Enemy tar = SpawnManager.Instance.worms[Random.Range(0, SpawnManager.Instance.worms.Count)];
         tar.health -= strength;
     }
+
 }

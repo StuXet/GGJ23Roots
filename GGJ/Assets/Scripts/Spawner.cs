@@ -20,6 +20,6 @@ public class Spawner : MonoBehaviour
             prefabIndex = prefabs.Length - 1;
         }
         GameObject worm = Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
-        Bird.Instance.worms.Add(worm.GetComponent<Enemy>());
+        SpawnManager.Instance.worms.Add(worm.GetComponent<Enemy>());
     }
 }

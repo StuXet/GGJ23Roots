@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             GameManager.instance.AddPoints(points);
-            Bird.Instance.worms.Remove(this);
+            SpawnManager.Instance.worms.Remove(this);
             Destroy(gameObject);
         }
     }

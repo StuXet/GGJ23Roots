@@ -21,7 +21,7 @@ public class RootHealth : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             currentHealth -= 10;
-            Bird.Instance.worms.Remove(collision.gameObject.GetComponent<Enemy>());
+            SpawnManager.Instance.worms.Remove(collision.gameObject.GetComponent<Enemy>());
             Destroy(collision.gameObject);
             if (currentHealth <= 0)
             {
