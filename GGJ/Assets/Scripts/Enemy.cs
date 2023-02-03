@@ -21,12 +21,4 @@ public class Enemy : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            playerHealth.TakeDamage(damage);
-        }
-    }
 }

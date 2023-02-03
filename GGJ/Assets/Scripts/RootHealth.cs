@@ -5,29 +5,28 @@ using UnityEngine.UI;
 
 public class RootHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
+    public int maxHealth = 100;
     public int currentHealth;
-    public Slider healthSlider;
+    public Text healthText;
 
-    private void Start()
+    void Start()
     {
-        currentHealth = startingHealth;
+        currentHealth = maxHealth;
+        UpdateHealthText();
     }
 
-    public void TakeDamage(int damage)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        currentHealth -= damage;
-
-        healthSlider.value = currentHealth;
-
-        if (currentHealth <= 0)
+            Debug.Log("PP");
+        if (collision.gameObject.tag == "Enemy")
         {
-            Die();
+            currentHealth -= 10;
+            UpdateHealthText();
         }
     }
 
-    void Die()
+    void UpdateHealthText()
     {
-        Debug.Log("dead");
+        healthText.text = "Health: " + currentHealth;
     }
 }
