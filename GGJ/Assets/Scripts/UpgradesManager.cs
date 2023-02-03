@@ -6,6 +6,7 @@ public class UpgradesManager : MonoBehaviour
 {
 
     [Header("Mole")]
+    [SerializeField] GameObject moleModel;
     public float molePrice;
     public float molePriceMod;
     public int moleDamageUpgrade;
@@ -13,8 +14,8 @@ public class UpgradesManager : MonoBehaviour
     bool moleFirstPurchase;
     public void MoleUpgrade()
     {
-        WormKiller.Instance.strength += moleDamageUpgrade;
-        WormKiller.Instance.hitInterval -= moleSpeedUpgrade;
+        Bird.Instance.strength += moleDamageUpgrade;
+        Bird.Instance.hitInterval -= moleSpeedUpgrade;
         GameManager.instance.score -= (int)molePrice;
         molePrice *= molePriceMod;
         if (moleFirstPurchase)
@@ -26,6 +27,7 @@ public class UpgradesManager : MonoBehaviour
     [Space(10)]
 
     [Header("Bird")]
+    [SerializeField] GameObject birdModel;
     public float birdPrice;
     public float birdPriceMod;
     public int birdDamageUpgrade;
@@ -33,8 +35,8 @@ public class UpgradesManager : MonoBehaviour
     bool birdFirstPurchase;
     public void BirdUpgrade()
     {
-        WormKiller.Instance.strength += birdDamageUpgrade;
-        WormKiller.Instance.hitInterval -= birdSpeedUpgrade;
+        Bird.Instance.strength += birdDamageUpgrade;
+        Bird.Instance.hitInterval -= birdSpeedUpgrade;
         GameManager.instance.score -= (int)birdPrice;
         birdPrice *= birdPriceMod;
         if (birdFirstPurchase)
@@ -46,6 +48,7 @@ public class UpgradesManager : MonoBehaviour
     [Space(10)]
 
     [Header("K300")]
+    [SerializeField] GameObject kModel;
     public float kPrice;
     public float kPriceMod;
     public int kDamageUpgrade;
@@ -53,8 +56,8 @@ public class UpgradesManager : MonoBehaviour
     bool kFirstPurchase;
     public void K300Upgrade()
     {
-        WormKiller.Instance.strength += kDamageUpgrade;
-        WormKiller.Instance.hitInterval -= kSpeedUpgrade;
+        Bird.Instance.strength += kDamageUpgrade;
+        Bird.Instance.hitInterval -= kSpeedUpgrade;
         GameManager.instance.score -= (int)kPrice;
         kPrice *= kPriceMod;
         if (kFirstPurchase)
@@ -67,6 +70,7 @@ public class UpgradesManager : MonoBehaviour
     [Space(10)]
 
     [Header("Sprinkler")]
+    [SerializeField] GameObject sprinklerModel;
     public float sprinklerPrice;
     public float sprinklerPriceMod;
     public int sprinklerDamageUpgrade;
@@ -74,8 +78,8 @@ public class UpgradesManager : MonoBehaviour
     bool sprinklerFirstPurchase;
     public void SprinklerUpgrade()
     {
-        WormKiller.Instance.strength += sprinklerDamageUpgrade;
-        WormKiller.Instance.hitInterval -= sprinklerSpeedUpgrade;
+        Bird.Instance.strength += sprinklerDamageUpgrade;
+        Bird.Instance.hitInterval -= sprinklerSpeedUpgrade;
         GameManager.instance.score -= (int)sprinklerPrice;
         sprinklerPrice *= sprinklerPriceMod;
         if (sprinklerFirstPurchase)

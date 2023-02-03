@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WormKiller : MonoBehaviour
+public class Bird : MonoBehaviour
 {
     public List<Enemy> worms;
     public float hitInterval = 2;
@@ -10,8 +10,8 @@ public class WormKiller : MonoBehaviour
     public bool isActive;
     float timer;
 
-    private static WormKiller instance;
-    public static WormKiller Instance { get { return instance; } }
+    private static Bird instance;
+    public static Bird Instance { get { return instance; } }
 
     private void Awake()
     {

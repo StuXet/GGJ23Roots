@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
     public int spawnVariety = 0;
     int currentLevel = 1;
     [SerializeField] float levelIncreaseTime;
-    [SerializeField] float timer;
+    float timer;
 
     private static LevelManager instance;
     public static LevelManager Instance { get { return instance; } }

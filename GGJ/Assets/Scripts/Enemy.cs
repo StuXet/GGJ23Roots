@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int damage = 10;
     public float speed = 2f;
     public int health = 5;
+    public int level;
     [SerializeField] int points = 5;
 
     private Transform player;
@@ -37,7 +38,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             GameManager.instance.AddPoints(points);
-            WormKiller.Instance.worms.Remove(this);
+            Bird.Instance.worms.Remove(this);
             Destroy(gameObject);
         }
     }

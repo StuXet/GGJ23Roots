@@ -98,8 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de0f6264a19b0d489b27aeb6d369880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  speed: 0.2
+  damage: 1
+  speed: 1
+  health: 3
+  level: 2
+  points: 5
 --- !u!114 &4381788603088864481
 MonoBehaviour:
   m_ObjectHideFlags: 0

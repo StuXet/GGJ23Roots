@@ -99,7 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 0.2
+  speed: 0.3
+  health: 11
+  level: 3
+  points: 5
 --- !u!114 &6831993497603942598
 MonoBehaviour:
   m_ObjectHideFlags: 0
