@@ -135,6 +135,8 @@ MonoBehaviour:
   health: 5
   level: 1
   points: 5
+  source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 3fe7d78777fe02d4e986dfc831b50b69, type: 3}
 --- !u!114 &6596262747880480800
 MonoBehaviour:
   m_ObjectHideFlags: 0
