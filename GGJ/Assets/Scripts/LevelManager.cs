@@ -52,7 +52,7 @@ public class LevelManager : MonoBehaviour
             {
                 spawnVariety++;
             }
-            if (currentLevel % 5 == 0)
+            if (currentLevel % 5 == 0 || !(treeLvlCounter >= 5))
             {
                 UpdateTree();
             }
@@ -74,14 +74,19 @@ public class LevelManager : MonoBehaviour
 
     void UpdateTree()
     {
-        treeLevels[treeLvlCounter].SetActive(false);
-        treeLevelsLogo[treeLvlCounter].SetActive(false);
-        treeLvlCounter++;
-        if (!treeLevels[treeLvlCounter] && !treeLevelsLogo[treeLvlCounter])
+        if (treeLvlCounter <= 3)
+        {
+            treeLevels[treeLvlCounter].SetActive(false);
+            treeLevelsLogo[treeLvlCounter].SetActive(false);
+            treeLvlCounter++;
+        }
+
+        if (treeLvlCounter <= 4)
         {
             treeLevels[treeLvlCounter].SetActive(true);
             treeLevelsLogo[treeLvlCounter].SetActive(true);
         }
+
     }
 
 }

@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     public void Spawn()
     {
         int prefabIndex = Random.Range(0, LevelManager.Instance.spawnVariety);
-        if (prefabIndex > prefabs.Length)
+        if (prefabIndex >= prefabs.Length)
         {
             prefabIndex = prefabs.Length - 1;
         }

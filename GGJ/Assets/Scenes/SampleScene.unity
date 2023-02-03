@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnVariety: 1
   currentLevelText: {fileID: 1222353526}
-  levelIncreaseTime: 2
+  levelIncreaseTime: 1
   treeLevels:
   - {fileID: 1350891271}
   - {fileID: 323711155}
@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8838cfddfa22e6b4babe41f9900de191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1061
   currentHealth: 0
 --- !u!1 &242107509
 GameObject:
@@ -5513,7 +5513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8838cfddfa22e6b4babe41f9900de191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 985
   currentHealth: 0
 --- !u!1 &1062557025
 GameObject:
@@ -6944,7 +6944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1350891272
 Transform:
   m_ObjectHideFlags: 0
@@ -9192,7 +9192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8838cfddfa22e6b4babe41f9900de191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1014
   currentHealth: 0
 --- !u!60 &2097328347
 PolygonCollider2D:
