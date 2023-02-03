@@ -32,6 +32,18 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         UpdateScoreText();
+        UpdateWormKillText();
+    }
+
+    public void AddKills(int killsToAdd)
+    {
+        killCount += killsToAdd;
+        UpdateWormKillText();
+    }
+
+    public void UpdateWormKillText()
+    {
+        killText.text = ""+killCount;
     }
 
     public void AddPoints(int pointsToAdd)

@@ -157,7 +157,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 830017956}
+  killText: {fileID: 573243489}
+  killCount: 0
   playerDamage: 5
+  wormSpeedDecreaser: 0
   score: 0
 --- !u!4 &737847
 Transform:
@@ -325,7 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnVariety: 1
-  levelIncreaseTime: 45
+  currentLevelText: {fileID: 1222353526}
+  levelIncreaseTime: 5
 --- !u!1 &27609156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,7 +2503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &535498210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2763,7 +2767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105, y: 1211}
+  m_AnchoredPosition: {x: 141, y: 1211}
   m_SizeDelta: {x: 743.8506, y: 137.457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573243489
@@ -3928,7 +3932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &723050639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7042,7 +7046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1453041593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7558,7 +7562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1623244800
 SpriteRenderer:
   m_ObjectHideFlags: 0

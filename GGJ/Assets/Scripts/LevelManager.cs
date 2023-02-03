@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     public int spawnVariety = 0;
     int currentLevel = 1;
+    public Text currentLevelText;
     [SerializeField] float levelIncreaseTime;
     float timer;
 
@@ -29,7 +31,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        
+        UpdateLevel();
     }
 
     // Update is called once per frame
@@ -47,8 +49,19 @@ public class LevelManager : MonoBehaviour
             {
                 spawnVariety++;
             }
-            currentLevel++;
+            LevelUp();
             SpawnManager.Instance.spawnInterval *= 0.8f;
         }
+    }
+
+    public void LevelUp()
+    {
+        currentLevel++;
+        UpdateLevel();
+    }
+
+    public void UpdateLevel()
+    {
+        currentLevelText.text = "Level: " + currentLevel;
     }
 }
