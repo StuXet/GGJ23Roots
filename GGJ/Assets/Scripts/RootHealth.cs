@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class RootHealth : MonoBehaviour
 {
+    GameManager gameManager;
     public int maxHealth = 100;
     public int currentHealth;
     public Text healthText;
 
     void Start()
     {
+        gameManager = GameManager.instance;
         currentHealth = maxHealth;
         UpdateHealthText();
     }
@@ -23,11 +25,21 @@ public class RootHealth : MonoBehaviour
             currentHealth -= 10;
             UpdateHealthText();
             Destroy(collision.gameObject);
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                Death();
+            }
         }
     }
 
     void UpdateHealthText()
     {
         healthText.text = "Health: " + currentHealth;
+    }
+
+    void Death()
+    {
+        gameManager.Pause();
     }
 }
