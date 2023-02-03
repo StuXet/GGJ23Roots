@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public int points = 10;
     public Text scoreText;
     public int currentLvl = 1;
+    bool isrunning = true; 
 
     private int score;
 
@@ -39,5 +40,17 @@ public class GameManager : MonoBehaviour
     void UpdateScoreText()
     {
         scoreText.text = "Score: " + score;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        isrunning = false;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        isrunning = true;
     }
 }
