@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]List<Spawner> spawners = new List<Spawner>();
     public float spawnInterval = 1;
     float timer;
-
+    [HideInInspector] public List<Enemy> worms;
     private static SpawnManager instance;
     public static SpawnManager Instance { get { return instance; } }
 
