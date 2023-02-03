@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateWormKillText()
     {
-        killText.text = ""+killCount;
+        killText.text = "" + killCount;
     }
 
     public void AddPoints(int pointsToAdd)
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateScoreText()
     {
-        scoreText.text = "Points: " + score;
+        scoreText.text = "" + score;
     }
 
     public void Pause()
