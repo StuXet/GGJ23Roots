@@ -22,8 +22,7 @@ public class ClickDestroy : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    gameManager.AddPoints(gameManager.points);
-                    Destroy(gameObject);
+                    gameObject.GetComponent<Enemy>().health -= GameManager.instance.playerDamage;
                 }
             }
         }

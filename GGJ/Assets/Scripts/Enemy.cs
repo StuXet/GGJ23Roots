@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int damage = 10;
     public float speed = 2f;
+    public int health = 1;
+    [SerializeField] int points = 5;
 
     private Transform player;
     private RootHealth playerHealth;
@@ -20,5 +22,16 @@ public class Enemy : MonoBehaviour
     {
         Vector2 direction = (player.position - transform.position).normalized;
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        CheckHealth();
+    }
+
+    void CheckHealth()
+    {
+        if (health <= 0)
+        {
+            GameManager.instance.AddPoints(points);
+            WormKiller.Instance.worms.Remove(this);
+            Destroy(gameObject);
+        }
     }
 }

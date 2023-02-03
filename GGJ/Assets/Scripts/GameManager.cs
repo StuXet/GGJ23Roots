@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int points = 10;
     public Text scoreText;
+    public int playerDamage = 1;
     public int currentLvl = 1;
     bool isrunning = true; 
 

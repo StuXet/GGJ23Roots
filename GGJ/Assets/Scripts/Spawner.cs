@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     public void Spawn()
     {
         int prefabIndex = Random.Range(0, gameManager.currentLvl);
-        Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
+        GameObject worm = Instantiate(prefabs[prefabIndex], transform.position, transform.rotation);
+        WormKiller.Instance.worms.Add(worm.GetComponent<Enemy>());
     }
 }

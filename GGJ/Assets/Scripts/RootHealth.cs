@@ -24,6 +24,7 @@ public class RootHealth : MonoBehaviour
         {
             currentHealth -= 10;
             UpdateHealthText();
+            WormKiller.Instance.worms.Remove(collision.gameObject.GetComponent<Enemy>());
             Destroy(collision.gameObject);
             if (currentHealth <= 0)
             {
