@@ -277,28 +277,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4d072da326ae846aedebf38cacc3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mole: {fileID: 0}
+  mole: {fileID: 104863292}
   moleLVL: 0
-  molePrice: 0
-  molePriceMod: 0
+  molePrice: 50
+  molePriceMod: 1.5
   moleWormLvlUpgrade: 0
   moleSpeedUpgrade: 0
-  bird: {fileID: 0}
+  bird: {fileID: 1588364278}
   birdLVL: 0
-  birdPrice: 0
-  birdPriceMod: 0
+  birdPrice: 50
+  birdPriceMod: 1.5
   birdDamageUpgrade: 0
   birdSpeedUpgrade: 0
-  k300: {fileID: 0}
+  k300: {fileID: 1515588935}
   k300LVL: 0
   kPrice: 0
-  kPriceMod: 0
+  kPriceMod: 1.5
   kDamageUpgrade: 0
   kSpeedUpgrade: 0
-  sprinkler: {fileID: 0}
+  sprinkler: {fileID: 1265891809}
   sprinklerLVL: 0
-  sprinklerPrice: 0
-  sprinklerPriceMod: 0
+  sprinklerPrice: 50
+  sprinklerPriceMod: 1.5
   sprinklerDamageUpgrade: 0
   sprinklerSpeedUpgrade: 0
 --- !u!114 &737850
@@ -329,7 +329,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnVariety: 1
   currentLevelText: {fileID: 1222353526}
-  levelIncreaseTime: 5
+  levelIncreaseTime: 2
+  treeLevels:
+  - {fileID: 1350891271}
+  - {fileID: 323711155}
+  - {fileID: 1040643354}
+  - {fileID: 625611819}
+  - {fileID: 2129978356}
+  treeLevelsLogo:
+  - {fileID: 491461717}
+  - {fileID: 723050638}
+  - {fileID: 535498209}
+  - {fileID: 1453041592}
+  - {fileID: 1623244799}
 --- !u!1 &27609156
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +542,7 @@ GameObject:
   - component: {fileID: 104863291}
   - component: {fileID: 104863290}
   - component: {fileID: 104863289}
+  - component: {fileID: 104863292}
   m_Layer: 0
   m_Name: mole_sprite_sheet_0
   m_TagString: Untagged
@@ -622,6 +635,20 @@ Transform:
   m_Father: {fileID: 53510779}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &104863292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104863288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e148affb902d14bb7d4b4b228b81f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wormMaxLVL: 0
+  killInterval: 0
 --- !u!1001 &110328761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6023,6 +6050,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1141817456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141817457}
+  m_Layer: 0
+  m_Name: WormsTarget
+  m_TagString: WormTarget
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1141817457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141817456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1171422578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6538,6 +6595,7 @@ GameObject:
   - component: {fileID: 1265891808}
   - component: {fileID: 1265891807}
   - component: {fileID: 1265891806}
+  - component: {fileID: 1265891809}
   m_Layer: 0
   m_Name: sprinkler_sprite_sheet_1
   m_TagString: Untagged
@@ -6630,6 +6688,19 @@ Transform:
   m_Father: {fileID: 53510779}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1265891809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265891805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df660d65083aa1a4ca627d51e7539a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wormSlower: 0
 --- !u!1 &1267940914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7205,6 +7276,7 @@ GameObject:
   - component: {fileID: 1515588934}
   - component: {fileID: 1515588933}
   - component: {fileID: 1515588932}
+  - component: {fileID: 1515588935}
   m_Layer: 0
   m_Name: spray_sprite_sheet (1)_4
   m_TagString: Untagged
@@ -7297,6 +7369,20 @@ Transform:
   m_Father: {fileID: 53510779}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -80.125}
+--- !u!114 &1515588935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515588931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0c8389b963dd74a88bf52b8b7ea07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  dmgInterval: 0
 --- !u!1001 &1547385620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7454,6 +7540,7 @@ GameObject:
   - component: {fileID: 1588364277}
   - component: {fileID: 1588364276}
   - component: {fileID: 1588364275}
+  - component: {fileID: 1588364278}
   m_Layer: 0
   m_Name: bird_sprite_sheet_0
   m_TagString: Untagged
@@ -7546,6 +7633,20 @@ Transform:
   m_Father: {fileID: 53510779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588364278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588364274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8b442d3cd2d844cb1aa856bc8a0b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitInterval: 2
+  strength: 1
 --- !u!1 &1623244799
 GameObject:
   m_ObjectHideFlags: 0

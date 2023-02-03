@@ -97,6 +97,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 8628176922171466475, guid: eae05ce9da1ef574f9e37e9258f22938, type: 3}
-  initialDelay: 1
-  spawnInterval: 5
-  intervalDecrease: 0.0001
+  - {fileID: 1222989755058849322, guid: 450e6b34d0db16a48bea8f328a06ce36, type: 3}
+  - {fileID: 8279813851646011917, guid: 2e2741ff3df9f5a42843740ee4744d82, type: 3}
+  - {fileID: 4473308535591109628, guid: 99681f97bbec43e429a83e20c193f2ab, type: 3}
+  - {fileID: 1641391804495419603, guid: 2e863ba11f8f70f49a6f50fe33b80af8, type: 3}
+  - {fileID: 6817577251724700777, guid: 19bb47b679d0e4a428b3b97ce9e2f374, type: 3}
+  - {fileID: 4712845746916514941, guid: 5a7f0eb48dfa5674aac117afe153fcd9, type: 3}
+  - {fileID: 6025307688801884418, guid: 6381062193d27db45a8efb81370a722b, type: 3}
+  - {fileID: 8627568389249714313, guid: 89b5a15c618c5ab4fa25ac692c8eb22f, type: 3}
+  - {fileID: 885579887456876081, guid: c51f3c22335bab24d939d2ef8c651189, type: 3}

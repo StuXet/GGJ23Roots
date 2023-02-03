@@ -11,8 +11,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float levelIncreaseTime;
     float timer;
 
-    GameObject[] treeLevels;
-
+    [SerializeField]GameObject[] treeLevels;
+    [SerializeField]GameObject[] treeLevelsLogo;
+    int treeLvlCounter = 0;
 
     private static LevelManager instance;
     public static LevelManager Instance { get { return instance; } }
@@ -46,11 +47,16 @@ public class LevelManager : MonoBehaviour
     {
         if (timer >= levelIncreaseTime) 
         {
+            LevelUp();
             if (currentLevel % 2 == 0)
             {
                 spawnVariety++;
             }
-            LevelUp();
+            if (currentLevel % 5 == 0)
+            {
+                UpdateTree();
+            }
+            timer = 0; 
             SpawnManager.Instance.spawnInterval *= 0.8f;
         }
     }
@@ -65,4 +71,17 @@ public class LevelManager : MonoBehaviour
     {
         currentLevelText.text = "Level: " + currentLevel;
     }
+
+    void UpdateTree()
+    {
+        treeLevels[treeLvlCounter].SetActive(false);
+        treeLevelsLogo[treeLvlCounter].SetActive(false);
+        treeLvlCounter++;
+        if (!treeLevels[treeLvlCounter] && !treeLevelsLogo[treeLvlCounter])
+        {
+            treeLevels[treeLvlCounter].SetActive(true);
+            treeLevelsLogo[treeLvlCounter].SetActive(true);
+        }
+    }
+
 }
