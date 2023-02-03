@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateScoreText()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Points: " + score;
     }
 
     public void Pause()
