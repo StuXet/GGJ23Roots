@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 9559cc0370e099640b53534052f9f11a
+guid: 4e1e886442b26804c8c7c9a0bc8650be
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1866406421684740106
+    second: sprinkler_sprite_sheet (1)_1
+  - first:
+      213: -9178562572803347603
+    second: sprinkler_sprite_sheet (1)_6
+  - first:
+      213: 1829933518571694103
+    second: sprinkler_sprite_sheet (1)_7
+  - first:
+      213: 3069661544116213034
+    second: sprinkler_sprite_sheet (1)_10
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -41,7 +53,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +114,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprinkler_sprite_sheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 92
+        width: 586
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00e60b70cec6e910800000000000000
+      internalID: 1866406421684740106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprinkler_sprite_sheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 97
+        width: 586
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b6c5b58f13f9080800000000000000
+      internalID: -9178562572803347603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprinkler_sprite_sheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 92
+        width: 586
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718eb09f6da356910800000000000000
+      internalID: 1829933518571694103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprinkler_sprite_sheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2924
+        y: 92
+        width: 586
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2559bd19e0a99a20800000000000000
+      internalID: 3069661544116213034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
