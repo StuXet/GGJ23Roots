@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77df56d41313d1e4f8cb777df62d46d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 830017956}
   playerDamage: 1
   currentLvl: 1
 --- !u!4 &737847
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 830017957}
   - component: {fileID: 830017956}
   m_Layer: 5
-  m_Name: 'Points: 9999'
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
