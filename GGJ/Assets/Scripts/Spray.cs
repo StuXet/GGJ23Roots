@@ -7,6 +7,8 @@ public class Spray : MonoBehaviour
     public int damage;
     public float dmgInterval;
 
+
+
     float timer;
     // Start is called before the first frame update
     void Start()

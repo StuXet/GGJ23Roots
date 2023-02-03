@@ -7,7 +7,7 @@ public class UpgradesManager : MonoBehaviour
 
     [Header("Mole")]
     [SerializeField] Mole mole;
-    [SerializeField] int moleLVL;
+    public int moleLVL;
     public float molePrice;
     public float molePriceMod;
     public int moleWormLvlUpgrade;
@@ -33,7 +33,7 @@ public class UpgradesManager : MonoBehaviour
 
     [Header("Bird")]
     [SerializeField] Bird bird;
-    [SerializeField] int birdLVL;
+    public int birdLVL;
     public float birdPrice;
     public float birdPriceMod;
     public int birdDamageUpgrade;
@@ -56,7 +56,7 @@ public class UpgradesManager : MonoBehaviour
 
     [Header("K300")]
     [SerializeField] Spray k300;
-    [SerializeField] int k300LVL;
+    public int k300LVL;
     public float kPrice;
     public float kPriceMod;
     public int kDamageUpgrade;
@@ -77,8 +77,8 @@ public class UpgradesManager : MonoBehaviour
     [Space(10)]
 
     [Header("Sprinkler")]
-    [SerializeField] GameObject sprinkler;
-    [SerializeField] int sprinklerLVL;
+    [SerializeField] Sprinkler sprinkler;
+    public int sprinklerLVL;
     public float sprinklerPrice;
     public float sprinklerPriceMod;
     public int sprinklerDamageUpgrade;
@@ -86,13 +86,12 @@ public class UpgradesManager : MonoBehaviour
     bool sprinklerFirstPurchase;
     public void SprinklerUpgrade()
     {
-       
+        GameManager.instance.wormSpeedDecreaser += sprinkler.wormSlower;
         GameManager.instance.score -= (int)sprinklerPrice;
         sprinklerPrice *= sprinklerPriceMod;
         if (sprinklerFirstPurchase)
         {
-            //show model
-
+            sprinkler.gameObject.SetActive(true);
         }
         sprinklerLVL++;
     }

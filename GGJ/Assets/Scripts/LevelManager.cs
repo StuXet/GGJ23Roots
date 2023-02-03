@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] float levelIncreaseTime;
     float timer;
 
+    GameObject[] treeLevels;
+
     private static LevelManager instance;
     public static LevelManager Instance { get { return instance; } }
     private void Awake()

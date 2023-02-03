@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Text scoreText;
+    public Text killText;
+    public int killCount;
     public int playerDamage = 5;
     bool isrunning = true;
-
+    [HideInInspector] public float wormSpeedDecreaser;
 
     public int score;
 

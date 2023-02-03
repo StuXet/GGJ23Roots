@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sprinkler : MonoBehaviour
 {
+    public float wormSlower;
     // Start is called before the first frame update
     void Start()
     {
