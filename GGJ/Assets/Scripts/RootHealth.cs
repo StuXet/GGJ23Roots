@@ -22,6 +22,7 @@ public class RootHealth : MonoBehaviour
         {
             currentHealth -= 10;
             UpdateHealthText();
+            Destroy(collision.gameObject);
         }
     }
 
