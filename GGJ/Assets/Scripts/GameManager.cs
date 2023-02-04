@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    [SerializeField] GameObject loseScreen;
+    [SerializeField] GameObject loseBG;
     public int maxHealth = 100;
     public int currentHealth;
     public Text scoreText;
@@ -32,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
+        currentHealth = maxHealth;
         score = 0;
         UpdateScoreText();
         UpdateWormKillText();
@@ -39,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        CheckDeath();
+        Death();
     }
 
     public void AddKills(int killsToAdd)
@@ -76,16 +81,18 @@ public class GameManager : MonoBehaviour
         isrunning = true;
     }
 
-    void CheckDeath()
+    void Death()
     {
         if (currentHealth <= 0)
         {
-            Death();
+            Time.timeScale = 0;
+            loseScreen.SetActive(true);
+            loseBG.SetActive(true);
         }
     }
 
-    void Death()
+    public void RestartBTN()
     {
-
+        SceneManager.LoadScene(0);
     }
 }
