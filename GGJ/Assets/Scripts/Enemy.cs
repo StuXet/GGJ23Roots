@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] int points = 5;
     [SerializeField] GameObject squahAnim;
+    [SerializeField] GameObject popupScore;
 
     public int damage = 10;
     public float speed = 2f;
@@ -44,6 +45,8 @@ public class Enemy : MonoBehaviour
             SpawnManager.Instance.worms.Remove(this);
             GameObject sq = Instantiate(squahAnim, transform.position, transform.rotation);
             sq.transform.localScale = transform.localScale * 7;
+            GameObject pp = Instantiate(popupScore, transform.position, Quaternion.identity);
+            pp.GetComponent<TextMesh>().text = "+" + points.ToString();
             Destroy(gameObject);
         }
     }

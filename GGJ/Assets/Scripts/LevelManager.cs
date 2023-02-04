@@ -59,14 +59,13 @@ public class LevelManager : MonoBehaviour
                 UpdateTree();
             }
             timer = 0; 
-            //SpawnManager.Instance.spawnInterval *= 0.8f;
+            SpawnManager.Instance.spawnInterval *= 0.9f;
         }
     }
 
     public void LevelUp()
     {
-        gameManager.maxHealth += 50;
-        gameManager.currentHealth = gameManager.maxHealth;
+        
         currentLevel++;
         UpdateLevel();
     }
@@ -89,8 +88,8 @@ public class LevelManager : MonoBehaviour
         {
             treeLevels[treeLvlCounter].SetActive(true);
             treeLevelsLogo[treeLvlCounter].SetActive(true);
+            gameManager.maxHealth += 50;
+            gameManager.currentHealth = gameManager.maxHealth;
         }
-
     }
-
 }
