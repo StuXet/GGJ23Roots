@@ -13,7 +13,7 @@ public class UpgradesManager : MonoBehaviour
     public float molePrice;
     public float molePriceMod;
     public int moleWormLvlUpgrade;
-    public int moleSpeedUpgrade;
+    public float moleSpeedUpgrade;
     bool moleFirstPurchase = true;
 
     private void Start()
@@ -53,7 +53,7 @@ public class UpgradesManager : MonoBehaviour
     public float birdPrice;
     public float birdPriceMod;
     public int birdDamageUpgrade;
-    public int birdSpeedUpgrade;
+    public float birdSpeedUpgrade;
     bool birdFirstPurchase = true;
     public void BirdUpgrade()
     {
@@ -80,11 +80,11 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] Spray k300;
     public Text k300LvlText;
     public Text k300PriceText;
-    public int k300LVL;
+    public float k300LVL;
     public float kPrice;
     public float kPriceMod;
     public int kDamageUpgrade;
-    public int kSpeedUpgrade;
+    public float kSpeedUpgrade;
     bool kFirstPurchase = true;
     public void K300Upgrade()
     {
@@ -92,6 +92,7 @@ public class UpgradesManager : MonoBehaviour
         {
             print("k300");
             GameManager.instance.score -= (int)kPrice;
+            k300.dmgInterval -= kSpeedUpgrade;
             kPrice *= kPriceMod;
             Mathf.Round(kPrice);
             if (kFirstPurchase)

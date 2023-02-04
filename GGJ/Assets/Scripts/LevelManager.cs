@@ -54,7 +54,7 @@ public class LevelManager : MonoBehaviour
             {
                 spawnVariety++;
             }
-            if (currentLevel % 5 == 0 || !(treeLvlCounter >= 5))
+            if (currentLevel % 5 == 0 && !(treeLvlCounter >= 5))
             {
                 UpdateTree();
             }

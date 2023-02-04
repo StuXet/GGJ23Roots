@@ -288,24 +288,24 @@ MonoBehaviour:
   moleLVL: 0
   molePrice: 2
   molePriceMod: 1.5
-  moleWormLvlUpgrade: 0
-  moleSpeedUpgrade: 0
+  moleWormLvlUpgrade: 1
+  moleSpeedUpgrade: 0.1
   bird: {fileID: 1588364278}
   birdLvlText: {fileID: 1959149068}
   birdPriceText: {fileID: 1426859722}
   birdLVL: 0
   birdPrice: 3
   birdPriceMod: 1.5
-  birdDamageUpgrade: 0
-  birdSpeedUpgrade: 0
+  birdDamageUpgrade: 1
+  birdSpeedUpgrade: 0.1
   k300: {fileID: 1515588935}
   k300LvlText: {fileID: 1632638849}
   k300PriceText: {fileID: 1062557027}
   k300LVL: 0
   kPrice: 4
   kPriceMod: 1.5
-  kDamageUpgrade: 0
-  kSpeedUpgrade: 0
+  kDamageUpgrade: 1
+  kSpeedUpgrade: 0.1
   sprinkler: {fileID: 1265891809}
   sprinklerLvlText: {fileID: 1697577294}
   sprinklerPriceText: {fileID: 1915647277}
@@ -327,6 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnVariety: 1
+  currentLevel: 1
   currentLevelText: {fileID: 1222353526}
   levelIncreaseTime: 1
   treeLevels:
@@ -957,8 +958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e148affb902d14bb7d4b4b228b81f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wormMaxLVL: 0
-  killInterval: 0
+  wormMaxLVL: 1
+  killInterval: 3
 --- !u!1001 &110328761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2690,6 +2691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 737853}
   clip: {fileID: 8300000, guid: 3fe7d78777fe02d4e986dfc831b50b69, type: 3}
+  lvlUpSound: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -7228,7 +7230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df660d65083aa1a4ca627d51e7539a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wormSlower: 0
+  wormSlower: 0.001
 --- !u!1 &1267940914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7827,8 +7829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0c8389b963dd74a88bf52b8b7ea07a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  dmgInterval: 0
+  damage: 1
+  dmgInterval: 3
 --- !u!1001 &1547385620
 PrefabInstance:
   m_ObjectHideFlags: 0
