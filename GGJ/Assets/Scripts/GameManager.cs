@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] GameObject loseBG;
     [SerializeField] GameObject loseScreen;
+    [SerializeField] HealthBar hpBar;
     public int maxHealth = 100;
     public int currentHealth;
     public Text scoreText;

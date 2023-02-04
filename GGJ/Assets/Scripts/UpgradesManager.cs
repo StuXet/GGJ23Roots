@@ -80,7 +80,7 @@ public class UpgradesManager : MonoBehaviour
     [SerializeField] Spray k300;
     public Text k300LvlText;
     public Text k300PriceText;
-    public float k300LVL;
+    public int k300LVL;
     public float kPrice;
     public float kPriceMod;
     public int kDamageUpgrade;

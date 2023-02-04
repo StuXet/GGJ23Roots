@@ -18,7 +18,8 @@ public class RootHealth : MonoBehaviour
         Debug.Log("PP");
         if (collision.gameObject.tag == "Enemy")
         {
-            gameManager.currentHealth -= 10;
+            gameManager.currentHealth -= collision.gameObject.GetComponent<Enemy>().damage;
+            HealthBar.Instance.SetHealth(gameManager.currentHealth);
             SpawnManager.Instance.worms.Remove(collision.gameObject.GetComponent<Enemy>());
             Destroy(collision.gameObject);
             if (gameManager.currentHealth <= 0)

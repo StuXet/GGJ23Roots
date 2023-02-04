@@ -89,6 +89,7 @@ public class LevelManager : MonoBehaviour
             treeLevels[treeLvlCounter].SetActive(true);
             treeLevelsLogo[treeLvlCounter].SetActive(true);
             gameManager.maxHealth += 50;
+            HealthBar.Instance.SetMaxHealth(gameManager.maxHealth);
             gameManager.currentHealth = gameManager.maxHealth;
         }
     }
