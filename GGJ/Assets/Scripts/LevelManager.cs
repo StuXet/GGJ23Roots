@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
                 UpdateTree();
             }
             timer = 0; 
-            SpawnManager.Instance.spawnInterval *= 0.8f;
+            //SpawnManager.Instance.spawnInterval *= 0.8f;
         }
     }
 

@@ -42,7 +42,8 @@ public class Enemy : MonoBehaviour
             GameManager.instance.AddPoints(points);
             GameManager.instance.AddKills(1);
             SpawnManager.Instance.worms.Remove(this);
-            Instantiate(squahAnim, transform);
+            GameObject sq = Instantiate(squahAnim, transform.position, transform.rotation);
+            sq.transform.localScale = transform.localScale * 7;
             Destroy(gameObject);
         }
     }
