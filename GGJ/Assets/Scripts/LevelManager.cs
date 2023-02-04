@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public int spawnVariety = 0;
-    int currentLevel = 1;
+    public int currentLevel = 1;
     public Text currentLevelText;
     [SerializeField] float levelIncreaseTime;
     float timer;

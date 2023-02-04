@@ -6,13 +6,19 @@ public class Audio : MonoBehaviour
 {
     [SerializeField] AudioSource source;
     [SerializeField] AudioClip clip;
+    [SerializeField] AudioClip lvlUpSound;
     GameManager gameManager;
+    LevelManager levelManager;
     int count;
+    int lvlCount;
 
     private void Start()
     {
         gameManager = GameManager.instance;
         count = gameManager.killCount;
+
+        levelManager = LevelManager.Instance;
+        lvlCount = levelManager.currentLevel;
     }
 
     private void Update()
@@ -21,6 +27,11 @@ public class Audio : MonoBehaviour
         {
             source.PlayOneShot(clip);
             count = gameManager.killCount;
+        }
+
+        if (lvlCount % 5 == 0)
+        {
+            source.PlayOneShot(lvlUpSound);
         }
     }
 
