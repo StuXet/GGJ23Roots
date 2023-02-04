@@ -45,8 +45,10 @@ public class Enemy : MonoBehaviour
             SpawnManager.Instance.worms.Remove(this);
             GameObject sq = Instantiate(squahAnim, transform.position, transform.rotation);
             sq.transform.localScale = transform.localScale * 7;
-            GameObject pp = Instantiate(popupScore, transform.position, Quaternion.identity);
-            pp.GetComponent<TextMesh>().text = "+" + points.ToString();
+            //GameObject pp = Instantiate(popupScore, Vector2.zero, Quaternion.identity);
+            //((RectTransform)pp.transform).anchoredPosition = new Vector2(transform.position.x, transform.position.y);
+            //pp.transform.position = transform.position;
+            //pp.GetComponent<TextMesh>().text = "+" + points.ToString();
             Destroy(gameObject);
         }
     }
