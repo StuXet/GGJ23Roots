@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] int points = 5;
+    [SerializeField] GameObject squahAnim;
+
     public int damage = 10;
     public float speed = 2f;
     public int health = 5;
     public int level;
-    [SerializeField] int points = 5;
 
     private Transform player;
     private RootHealth playerHealth;
@@ -40,6 +42,7 @@ public class Enemy : MonoBehaviour
             GameManager.instance.AddPoints(points);
             GameManager.instance.AddKills(1);
             SpawnManager.Instance.worms.Remove(this);
+            Instantiate(squahAnim, transform);
             Destroy(gameObject);
         }
     }

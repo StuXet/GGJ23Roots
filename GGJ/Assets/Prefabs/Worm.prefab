@@ -130,13 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de0f6264a19b0d489b27aeb6d369880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 5
+  squahAnim: {fileID: 3833599888719035536, guid: 24aaf19fc58f3654e9a6c7daed843fc3, type: 3}
   damage: 2
   speed: 0.5
   health: 5
   level: 1
-  points: 5
-  source: {fileID: 0}
-  clip: {fileID: 8300000, guid: 3fe7d78777fe02d4e986dfc831b50b69, type: 3}
 --- !u!114 &6596262747880480800
 MonoBehaviour:
   m_ObjectHideFlags: 0
