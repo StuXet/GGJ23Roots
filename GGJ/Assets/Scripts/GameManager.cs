@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public int maxHealth = 100;
+    public int currentHealth;
     public Text scoreText;
     public Text killText;
     public int killCount;
@@ -33,6 +35,11 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScoreText();
         UpdateWormKillText();
+    }
+
+    private void Update()
+    {
+        CheckDeath();
     }
 
     public void AddKills(int killsToAdd)
@@ -67,5 +74,18 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         isrunning = true;
+    }
+
+    void CheckDeath()
+    {
+        if (currentHealth <= 0)
+        {
+            Death();
+        }
+    }
+
+    void Death()
+    {
+
     }
 }

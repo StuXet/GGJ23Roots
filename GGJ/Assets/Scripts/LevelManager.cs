@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public Text currentLevelText;
     [SerializeField] float levelIncreaseTime;
     float timer;
+    GameManager gameManager;
 
     [SerializeField]GameObject[] treeLevels;
     [SerializeField]GameObject[] treeLevelsLogo;
@@ -34,6 +35,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         UpdateLevel();
+        gameManager = GameManager.instance;
     }
 
     // Update is called once per frame
@@ -63,6 +65,8 @@ public class LevelManager : MonoBehaviour
 
     public void LevelUp()
     {
+        gameManager.maxHealth += 50;
+        gameManager.currentHealth = gameManager.maxHealth;
         currentLevel++;
         UpdateLevel();
     }

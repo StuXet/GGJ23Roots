@@ -6,6 +6,7 @@ public class squashAnim : MonoBehaviour
 {
     private void Start()
     {
+        print("squash");
         Destroy(gameObject, 1);
     }
 }

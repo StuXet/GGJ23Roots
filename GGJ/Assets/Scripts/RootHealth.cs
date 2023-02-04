@@ -6,33 +6,25 @@ using UnityEngine.UI;
 public class RootHealth : MonoBehaviour
 {
     GameManager gameManager;
-    public int maxHealth = 100;
-    public int currentHealth;
+    
 
     void Start()
     {
         gameManager = GameManager.instance;
-        currentHealth = maxHealth;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            Debug.Log("PP");
+        Debug.Log("PP");
         if (collision.gameObject.tag == "Enemy")
         {
-            currentHealth -= 10;
+            gameManager.currentHealth -= 10;
             SpawnManager.Instance.worms.Remove(collision.gameObject.GetComponent<Enemy>());
             Destroy(collision.gameObject);
-            if (currentHealth <= 0)
+            if (gameManager.currentHealth <= 0)
             {
-                currentHealth = 0;
-                Death();
+                gameManager.currentHealth = 0;
             }
         }
-    }
-
-    void Death()
-    {
-        gameManager.Pause();
     }
 }
