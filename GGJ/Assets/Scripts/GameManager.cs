@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [SerializeField] GameObject loseScreen;
     [SerializeField] GameObject loseBG;
+    [SerializeField] GameObject loseScreen;
     public int maxHealth = 100;
     public int currentHealth;
     public Text scoreText;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+       DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -93,6 +93,6 @@ public class GameManager : MonoBehaviour
 
     public void RestartBTN()
     {
-        SceneManager.LoadScene(0);
+        Application.LoadLevel(Application.loadedLevel);
     }
 }
