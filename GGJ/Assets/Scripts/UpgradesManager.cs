@@ -23,20 +23,24 @@ public class UpgradesManager : MonoBehaviour
 
     public void MoleUpgrade()
     {
-        print("mole");
-        if (moleLVL % 2 == 0)
+        if (molePrice <= GameManager.instance.score)
         {
-            mole.wormMaxLVL += moleWormLvlUpgrade;
+            print("mole");
+            if (moleLVL % 2 == 0)
+            {
+                mole.wormMaxLVL += moleWormLvlUpgrade;
+            }
+            mole.killInterval -= moleSpeedUpgrade;
+            GameManager.instance.score -= (int)molePrice;
+            molePrice *= molePriceMod;
+            Mathf.Round(molePrice);
+            if (moleFirstPurchase)
+            {
+                mole.gameObject.SetActive(true);
+            }
+            ShopUpdateText();
+            moleLVL++;
         }
-        mole.killInterval -= moleSpeedUpgrade;
-        GameManager.instance.score -= (int)molePrice;
-        molePrice *= molePriceMod;
-        if (moleFirstPurchase)
-        {
-            mole.gameObject.SetActive(true);
-        }
-        ShopUpdateText();
-        moleLVL++;
     }
 
     [Space(10)]
@@ -53,17 +57,21 @@ public class UpgradesManager : MonoBehaviour
     bool birdFirstPurchase = true;
     public void BirdUpgrade()
     {
-        print("bird");
-        bird.strength += birdDamageUpgrade;
-        bird.hitInterval -= birdSpeedUpgrade;
-        GameManager.instance.score -= (int)birdPrice;
-        birdPrice *= birdPriceMod;
-        if (birdFirstPurchase)
+        if (birdPrice <= GameManager.instance.score)
         {
-            bird.gameObject.SetActive(true);
+            print("bird");
+            bird.strength += birdDamageUpgrade;
+            bird.hitInterval -= birdSpeedUpgrade;
+            GameManager.instance.score -= (int)birdPrice;
+            birdPrice *= birdPriceMod;
+            Mathf.Round(birdPrice);
+            if (birdFirstPurchase)
+            {
+                bird.gameObject.SetActive(true);
+            }
+            ShopUpdateText();
+            birdLVL++;
         }
-        ShopUpdateText();
-        birdLVL++;
     }
 
     [Space(10)]
@@ -80,15 +88,19 @@ public class UpgradesManager : MonoBehaviour
     bool kFirstPurchase = true;
     public void K300Upgrade()
     {
-        print("k300");
-        GameManager.instance.score -= (int)kPrice;
-        kPrice *= kPriceMod;
-        if (kFirstPurchase)
+        if (kPrice <= GameManager.instance.score)
         {
-            k300.gameObject.SetActive(true);
+            print("k300");
+            GameManager.instance.score -= (int)kPrice;
+            kPrice *= kPriceMod;
+            Mathf.Round(kPrice);
+            if (kFirstPurchase)
+            {
+                k300.gameObject.SetActive(true);
+            }
+            ShopUpdateText();
+            k300LVL++;
         }
-        ShopUpdateText();
-        k300LVL++;
     }
 
     [Space(10)]
@@ -105,16 +117,20 @@ public class UpgradesManager : MonoBehaviour
     bool sprinklerFirstPurchase = true;
     public void SprinklerUpgrade()
     {
-        print("sprink");
-        GameManager.instance.wormSpeedDecreaser += sprinkler.wormSlower;
-        GameManager.instance.score -= (int)sprinklerPrice;
-        sprinklerPrice *= sprinklerPriceMod;
-        if (sprinklerFirstPurchase)
+        if (sprinklerPrice <= GameManager.instance.score)
         {
-            sprinkler.gameObject.SetActive(true);
+            print("sprink");
+            GameManager.instance.wormSpeedDecreaser += sprinkler.wormSlower;
+            GameManager.instance.score -= (int)sprinklerPrice;
+            sprinklerPrice *= sprinklerPriceMod;
+            Mathf.Round(sprinklerPrice);
+            if (sprinklerFirstPurchase)
+            {
+                sprinkler.gameObject.SetActive(true);
+            }
+            ShopUpdateText();
+            sprinklerLVL++;
         }
-        ShopUpdateText();
-        sprinklerLVL++;
     }
 
     void ShopUpdateText()
