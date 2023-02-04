@@ -12,7 +12,7 @@ public class Audio : MonoBehaviour
     private void Start()
     {
         gameManager = GameManager.instance;
-        count = gameManager.killCount;   
+        count = gameManager.killCount;
     }
 
     private void Update()
