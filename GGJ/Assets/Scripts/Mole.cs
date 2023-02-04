@@ -32,6 +32,7 @@ public class Mole : MonoBehaviour
             {
                 tar.health -= tar.health;
                 timer = killInterval;
+                print("mole attack!");
             }
         }
     }
